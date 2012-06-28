@@ -12,8 +12,8 @@ What's that
 Dependence
 -----------
 
-- Django >= 1.3 # for static files
-- PIL # for image upload
+- `Django >= 1.3` # for static files
+- `PIL` # for image upload
 
 Getting started
 -----------
