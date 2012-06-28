@@ -29,24 +29,24 @@ Getting started
 
 * Add default config in settings.py (more settings see: <http://redactorjs.com/docs/settings/>):
 
-```REDACTOR_OPTIONS = {'lang': 'ru'}
+```
+REDACTOR_OPTIONS = {'lang': 'ru'}
 REDACTOR_UPLOAD = 'uploads/'
 ```
 
 Using in model
 -----------
 
-```python
-from django.db import models
-from redactor.fields import RedactorField
 
-class Entry(models.Model):
-    title = models.CharField(max_length=250, verbose_name=u'Заголовок')
-    short_text = RedactorField(verbose_name=u'Краткий текст')
-```
+    from django.db import models
+    from redactor.fields import RedactorField
+
+    class Entry(models.Model):
+        title = models.CharField(max_length=250, verbose_name=u'Заголовок')
+        short_text = RedactorField(verbose_name=u'Краткий текст')
 
 or use custom parametrs:
-```short_text = RedactorField(verbose_name=u'Краткий текст',
-                redactor_options={'lang': 'ru', 'focus': 'true'},
-                upload_to='tmp/')
-```
+
+    short_text = RedactorField(verbose_name=u'Краткий текст',
+                    redactor_options={'lang': 'ru', 'focus': 'true'},
+                    upload_to='tmp/')
